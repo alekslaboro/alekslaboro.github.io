@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>CardGame</title>	
+	<link href="https://fonts.googleapis.com/css?family=Anton|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<script src='cards.json'></script>
+	<script src='lib.js'></script>
+</head>
+<body>
+<div id="loading">Ballogun GAMES</div>
+<div id="container">
+	<div id="statusbar">
+	<div class="space"></div>	
+		<div class="status_icon">
+			<p>Казна</p>
+			<div class="status_bar">
+				<div id="money" class="bar">&#160</div>
+			</div>
+		</div>	
+		<div class="status_icon">
+			<p>Армия</p>
+			<div class="status_bar">
+				<div id="force" class="bar">&#160</div>
+			</div>
+		</div>
+		<div class="status_icon">
+			<p>Партия</p>
+			<div class="status_bar">
+				<div id="party" class="bar">&#160</div>
+			</div>
+		</div>
+		<div class="status_icon">
+			<p>Рейтинг</p>
+			<div class="status_bar">
+				<div id="rating" class="bar">&#160</div>
+			</div>
+		</div>	
+	</div>
+	<div id="desk">	
+		<div class="space"></div>
+		<div id="card">
+			<div class="space"></div>
+			<div id="title"><p>Заголовок</p></div>
+			<div id="image">
+				<object type="image/svg+xml" data="images\city.svg" width="100%" height="100%">Изображение</object>
+			</div>
+		<div class="space"></div>
+			<div id="description"><p>Вопрос или утверждение</p></div>
+		<div class="space"></div>
+		</div>
+		<div class="space"></div>
+	</div>
+	<div id="controls">
+		<div id="lAnswer" onclick="getAnswer(0);"><p>Нет</p></div>	
+		<div id="rAnswer" onclick="getAnswer(1);"><p>Да</p></div>
+	</div>
+	<div id="legend">
+		<p>1920 год</p>
+	</div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+document.getElementById('statusbar').style.visibility='hidden';
+document.getElementById('container').style.display='none';
+</script>
+
